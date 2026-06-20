@@ -1,0 +1,16 @@
+user_id,date,fatigue_risk,behavior_profile,recommended_action,best_window,reason
+2347167796,2016-04-28,high,high-activity low-recovery user,reschedule workout,evening or next morning,elevated fatigue signal means intense training is better delayed.
+8792009665,2016-05-03,low,sedentary weekday user,normal workout,preferred routine window,fatigue signals are low enough to continue the planned routine.
+3977333714,2016-05-08,medium,high-activity low-recovery user,light workout,late afternoon,moderate recovery strain suggests lowering workout intensity.
+6117666160,2016-05-08,medium,consistent active user,light workout,late afternoon,moderate recovery strain suggests lowering workout intensity.
+1503960366,2016-05-10,low,high-activity low-recovery user,normal workout,preferred routine window,fatigue signals are low enough to continue the planned routine.
+5577150313,2016-05-10,low,high-activity low-recovery user,normal workout,preferred routine window,fatigue signals are low enough to continue the planned routine.
+4388161847,2016-05-10,high,high-activity low-recovery user,reschedule workout,evening or next morning,elevated fatigue signal means intense training is better delayed.
+5553957443,2016-05-11,high,consistent active user,reschedule workout,evening or next morning,elevated fatigue signal means intense training is better delayed.
+6962181067,2016-05-11,medium,consistent active user,light workout,late afternoon,moderate recovery strain suggests lowering workout intensity.
+2026352035,2016-05-11,low,consistent active user,normal workout,morning,low fatigue and modest recent activity support a normal session.
+8378563200,2016-05-11,medium,sedentary weekday user,light workout,late afternoon,moderate recovery strain suggests lowering workout intensity.
+4445114986,2016-05-11,low,sedentary weekday user,normal workout,preferred routine window,fatigue signals are low enough to continue the planned routine.
+4702921684,2016-05-11,high,consistent active user,reschedule workout,evening or next morning,elevated fatigue signal means intense training is better delayed.
+4319703577,2016-05-11,medium,consistent active user,light workout,late afternoon,moderate recovery strain suggests lowering workout intensity.
+7086361926,2016-05-11,medium,high-activity low-recovery user,light workout,late afternoon,moderate recovery strain suggests lowering workout intensity.

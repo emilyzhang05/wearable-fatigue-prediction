@@ -1,0 +1,11 @@
+task,feature_set,metric,mean,std
+fatigue_proxy,raw_daily,macro_f1,0.5556225391401763,0.08924411434622533
+fatigue_proxy,personal_baselines,macro_f1,0.6168422685689514,0.0671879030508661
+fatigue_proxy,lagged,macro_f1,0.8039788258256985,0.0634558774400314
+fatigue_proxy,rolling_windows,macro_f1,0.7408820221956768,0.06548002681732971
+fatigue_proxy,exponentially_weighted,macro_f1,0.7863243877273616,0.062686197634873
+next_day_activity,raw_daily,mae,67.83343579615584,5.842842435365315
+next_day_activity,personal_baselines,mae,68.77229310358437,7.858669544030969
+next_day_activity,lagged,mae,68.26414518551026,6.222555535189773
+next_day_activity,rolling_windows,mae,64.16053869766391,8.995967558458098
+next_day_activity,exponentially_weighted,mae,67.68355291211874,9.074455745077396

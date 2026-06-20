@@ -1,0 +1,398 @@
+{
+  "dataset_source": "fitbit",
+  "data_credits": {
+    "fitbit": {
+      "role": "Main modeling dataset",
+      "citation": "Fitbit Fitness Tracker Data, published on Kaggle by M\u00f6bius (arashnic).",
+      "url": "https://www.kaggle.com/datasets/arashnic/fitbit"
+    },
+    "mmash": {
+      "role": "Supporting physiology, sleep, and stress dataset",
+      "citation": "Rossi, A., et al. (2020). Multilevel Monitoring of Activity and Sleep in Healthy People (version 1.0.0). PhysioNet.",
+      "url": "https://doi.org/10.13026/cerq-fc86"
+    }
+  },
+  "dataset": {
+    "users": 24,
+    "daily_rows": 410,
+    "model_rows": 256
+  },
+  "classification_metrics": {
+    "baseline_most_frequent": {
+      "accuracy": 0.3088235294117647,
+      "precision_macro": 0.10294117647058824,
+      "recall_macro": 0.3333333333333333,
+      "f1_macro": 0.15730337078651685
+    },
+    "logistic_regression": {
+      "accuracy": 0.8823529411764706,
+      "precision_macro": 0.8783333333333333,
+      "recall_macro": 0.8835765488991295,
+      "f1_macro": 0.8773738130934533
+    },
+    "random_forest": {
+      "accuracy": 0.8235294117647058,
+      "precision_macro": 0.8184062850729518,
+      "recall_macro": 0.7901625704045059,
+      "f1_macro": 0.7921220400728597
+    },
+    "xgboost": {
+      "accuracy": 0.8676470588235294,
+      "precision_macro": 0.8489772727272727,
+      "recall_macro": 0.8224206349206349,
+      "f1_macro": 0.82562686910513
+    }
+  },
+  "regression_metrics": {
+    "baseline_mean": {
+      "mae": 80.87984981226533,
+      "rmse": 108.60629936942894
+    },
+    "random_forest": {
+      "mae": 78.74692527465996,
+      "rmse": 110.29469780605646
+    },
+    "xgboost": {
+      "mae": 78.37375214520623,
+      "rmse": 108.80937104848931
+    }
+  },
+  "cross_user_generalization": {
+    "baseline_most_frequent": {
+      "unseen_user_count": 5.0,
+      "accuracy": 0.3440847736349785,
+      "precision_macro": 0.11469492454499286,
+      "recall_macro": 0.3333333333333333,
+      "f1_macro": 0.1695471369153661,
+      "f1_macro_std": 0.027028289030139634
+    },
+    "logistic_regression": {
+      "unseen_user_count": 5.0,
+      "accuracy": 0.8490245676667453,
+      "precision_macro": 0.8676628320224598,
+      "recall_macro": 0.8547873336191693,
+      "f1_macro": 0.8549515642267667,
+      "f1_macro_std": 0.05319806659225007
+    },
+    "random_forest": {
+      "unseen_user_count": 5.0,
+      "accuracy": 0.8210355229899623,
+      "precision_macro": 0.8467980593550877,
+      "recall_macro": 0.8185406222408791,
+      "f1_macro": 0.8175317795370333,
+      "f1_macro_std": 0.0329637706886709
+    },
+    "xgboost": {
+      "unseen_user_count": 5.0,
+      "accuracy": 0.8283938973741988,
+      "precision_macro": 0.8481312888978095,
+      "recall_macro": 0.8250884058650426,
+      "f1_macro": 0.8228002655908622,
+      "f1_macro_std": 0.03783440193226806
+    }
+  },
+  "cross_user_activity_forecast": {
+    "baseline_mean": {
+      "unseen_user_count": 5.0,
+      "mae": 70.67310303064934,
+      "rmse": 90.27512115946487,
+      "mae_std": 12.783172262729519
+    },
+    "random_forest": {
+      "unseen_user_count": 5.0,
+      "mae": 72.90394947722513,
+      "rmse": 93.36953401327908,
+      "mae_std": 12.132913944781905
+    },
+    "xgboost": {
+      "unseen_user_count": 5.0,
+      "mae": 72.82999661044684,
+      "rmse": 93.66803762545214,
+      "mae_std": 12.943717826319636
+    }
+  },
+  "chronological_evaluation": {
+    "fatigue_proxy_classification": {
+      "baseline_most_frequent": {
+        "accuracy": 0.3088235294117647,
+        "precision_macro": 0.10294117647058824,
+        "recall_macro": 0.3333333333333333,
+        "f1_macro": 0.15730337078651685
+      },
+      "logistic_regression": {
+        "accuracy": 0.8823529411764706,
+        "precision_macro": 0.8783333333333333,
+        "recall_macro": 0.8835765488991295,
+        "f1_macro": 0.8773738130934533
+      },
+      "random_forest": {
+        "accuracy": 0.8235294117647058,
+        "precision_macro": 0.8184062850729518,
+        "recall_macro": 0.7901625704045059,
+        "f1_macro": 0.7921220400728597
+      },
+      "xgboost": {
+        "accuracy": 0.8676470588235294,
+        "precision_macro": 0.8489772727272727,
+        "recall_macro": 0.8224206349206349,
+        "f1_macro": 0.82562686910513
+      }
+    },
+    "next_day_activity_forecast": {
+      "baseline_mean": {
+        "mae": 80.87984981226533,
+        "rmse": 108.60629936942894
+      },
+      "random_forest": {
+        "mae": 78.74692527465996,
+        "rmse": 110.29469780605646
+      },
+      "xgboost": {
+        "mae": 78.37375214520623,
+        "rmse": 108.80937104848931
+      }
+    }
+  },
+  "selected_main_classifier": {
+    "model_name": "random_forest",
+    "rationale": "Random Forest selected because XGBoost unseen-user macro F1 (0.823) does not deliver a stable improvement over Random Forest (0.818) above the 0.02 threshold; the simpler model is preferred for interpretability and lower overfit risk. Paired-fold win rate was 60% and the improvement's lower 95% bound was -0.012."
+  },
+  "strongest_overall_classifier": "logistic_regression",
+  "feature_importance": [
+    {
+      "feature": "sleep_debt_hours",
+      "importance_mean": 0.2892371628254844,
+      "importance_std": 0.04516871106236472
+    },
+    {
+      "feature": "previous_activity_load",
+      "importance_mean": 0.14416711649322492,
+      "importance_std": 0.03327193937193427
+    },
+    {
+      "feature": "active_minutes_lag_1d",
+      "importance_mean": 0.021374383376282516,
+      "importance_std": 0.02232200045061609
+    },
+    {
+      "feature": "resting_hr_deviation",
+      "importance_mean": 0.015433666955789127,
+      "importance_std": 0.015655833893831125
+    },
+    {
+      "feature": "resting_hr_deviation_lag_1d",
+      "importance_mean": 0.00019179119735324157,
+      "importance_std": 0.005324997607440751
+    },
+    {
+      "feature": "is_weekend",
+      "importance_mean": 0.0,
+      "importance_std": 0.0
+    },
+    {
+      "feature": "sleep_lag_1d",
+      "importance_mean": -0.005371918270854453,
+      "importance_std": 0.009304435379227462
+    },
+    {
+      "feature": "sleep_hours",
+      "importance_mean": -0.009872698666991794,
+      "importance_std": 0.01405478365522744
+    },
+    {
+      "feature": "weekday",
+      "importance_mean": -0.010743836541708907,
+      "importance_std": 0.010743836541708907
+    },
+    {
+      "feature": "resting_heart_rate",
+      "importance_mean": -0.020469942484077464,
+      "importance_std": 0.011719023029511255
+    }
+  ],
+  "feature_set_comparison": [
+    {
+      "task": "fatigue_proxy",
+      "feature_set": "raw_daily",
+      "metric": "macro_f1",
+      "mean": 0.5556225391401763,
+      "std": 0.08924411434622533
+    },
+    {
+      "task": "fatigue_proxy",
+      "feature_set": "personal_baselines",
+      "metric": "macro_f1",
+      "mean": 0.6168422685689514,
+      "std": 0.0671879030508661
+    },
+    {
+      "task": "fatigue_proxy",
+      "feature_set": "lagged",
+      "metric": "macro_f1",
+      "mean": 0.8039788258256985,
+      "std": 0.0634558774400314
+    },
+    {
+      "task": "fatigue_proxy",
+      "feature_set": "rolling_windows",
+      "metric": "macro_f1",
+      "mean": 0.7408820221956768,
+      "std": 0.06548002681732971
+    },
+    {
+      "task": "fatigue_proxy",
+      "feature_set": "exponentially_weighted",
+      "metric": "macro_f1",
+      "mean": 0.7863243877273616,
+      "std": 0.062686197634873
+    },
+    {
+      "task": "next_day_activity",
+      "feature_set": "raw_daily",
+      "metric": "mae",
+      "mean": 67.83343579615584,
+      "std": 5.842842435365315
+    },
+    {
+      "task": "next_day_activity",
+      "feature_set": "personal_baselines",
+      "metric": "mae",
+      "mean": 68.77229310358437,
+      "std": 7.858669544030969
+    },
+    {
+      "task": "next_day_activity",
+      "feature_set": "lagged",
+      "metric": "mae",
+      "mean": 68.26414518551026,
+      "std": 6.222555535189773
+    },
+    {
+      "task": "next_day_activity",
+      "feature_set": "rolling_windows",
+      "metric": "mae",
+      "mean": 64.16053869766391,
+      "std": 8.995967558458098
+    },
+    {
+      "task": "next_day_activity",
+      "feature_set": "exponentially_weighted",
+      "metric": "mae",
+      "mean": 67.68355291211874,
+      "std": 9.074455745077396
+    }
+  ],
+  "selected_feature_sets": {
+    "fatigue_proxy": "lagged",
+    "next_day_activity": "rolling_windows"
+  },
+  "best_parameters": {
+    "classifier_random_forest": {
+      "n_estimators": 600,
+      "min_samples_leaf": 2,
+      "max_features": 0.5,
+      "max_depth": 8
+    },
+    "classifier_xgboost": {
+      "subsample": 1.0,
+      "reg_lambda": 10,
+      "reg_alpha": 1,
+      "n_estimators": 450,
+      "min_child_weight": 1,
+      "max_depth": 4,
+      "learning_rate": 0.1,
+      "gamma": 0,
+      "colsample_bytree": 1.0
+    },
+    "regressor_random_forest": {
+      "n_estimators": 600,
+      "min_samples_leaf": 12,
+      "max_features": 0.5,
+      "max_depth": null
+    },
+    "regressor_xgboost": {
+      "subsample": 0.8,
+      "reg_lambda": 10,
+      "reg_alpha": 0.1,
+      "n_estimators": 100,
+      "min_child_weight": 1,
+      "max_depth": 2,
+      "learning_rate": 0.01,
+      "gamma": 0.1,
+      "colsample_bytree": 1.0
+    }
+  },
+  "confidence_intervals": {
+    "fatigue_proxy:baseline_most_frequent": {
+      "metric": "f1_macro",
+      "mean": 0.1695471369153661,
+      "lower_95": 0.1458557970132997,
+      "upper_95": 0.1932384768174325
+    },
+    "fatigue_proxy:logistic_regression": {
+      "metric": "f1_macro",
+      "mean": 0.8549515642267667,
+      "lower_95": 0.8083214029034086,
+      "upper_95": 0.9015817255501247
+    },
+    "fatigue_proxy:random_forest": {
+      "metric": "f1_macro",
+      "mean": 0.8175317795370333,
+      "lower_95": 0.7886377605716367,
+      "upper_95": 0.8464257985024298
+    },
+    "fatigue_proxy:xgboost": {
+      "metric": "f1_macro",
+      "mean": 0.8228002655908622,
+      "lower_95": 0.7896369501042907,
+      "upper_95": 0.8559635810774336
+    },
+    "next_day_activity:baseline_mean": {
+      "metric": "mae",
+      "mean": 70.67310303064934,
+      "lower_95": 59.46815850880857,
+      "upper_95": 81.87804755249012
+    },
+    "next_day_activity:random_forest": {
+      "metric": "mae",
+      "mean": 72.90394947722513,
+      "lower_95": 62.268981501715636,
+      "upper_95": 83.53891745273461
+    },
+    "next_day_activity:xgboost": {
+      "metric": "mae",
+      "mean": 72.82999661044684,
+      "lower_95": 61.484327697486044,
+      "upper_95": 84.17566552340764
+    }
+  },
+  "evaluation_design": {
+    "fatigue_target": "Morning fatigue-risk proxy; Fitbit contains no observed fatigue label.",
+    "primary_validated_target": "Next-day active minutes.",
+    "chronological_holdout": "Latest 25% of each user's model-ready records.",
+    "cross_user_holdout": "5 repeated 70/30 user-group splits.",
+    "inner_tuning": "Four-fold GroupKFold, 30 randomized candidates by default."
+  },
+  "hypotheses": {
+    "H1": {
+      "statement": "Wearable signals reproduce the fatigue-risk proxy better than baseline.",
+      "status": "supported",
+      "evidence": "Best macro F1 0.877 vs baseline 0.157."
+    },
+    "H2": {
+      "statement": "Recent sleep/activity predicts next-day active minutes better than baseline.",
+      "status": "not supported",
+      "evidence": "Best MAE 78.4 vs baseline 80.9."
+    },
+    "H3": {
+      "statement": "Users can be grouped into interpretable behavior profiles.",
+      "status": "supported",
+      "evidence": "Identified 3 behavior profiles."
+    }
+  },
+  "behavior_profiles": [
+    "consistent active user",
+    "high-activity low-recovery user",
+    "sedentary weekday user"
+  ]
+}
