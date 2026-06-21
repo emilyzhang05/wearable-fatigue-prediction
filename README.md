@@ -4,6 +4,8 @@ Can everyday Fitbit data tell us when someone may need more recovery, or how act
 
 This project looks at real Fitbit sleep, heart-rate, and activity records. It turns those records into a simple visual story about recovery, routines, and what wearable data can and cannot predict.
 
+**[Open the live Streamlit dashboard](https://emilyzhang05-wearable-fatigue-prediction-dashboardapp-nfbijn.streamlit.app/)**
+
 ```bash
 streamlit run dashboard/app.py
 ```
