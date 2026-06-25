@@ -33,6 +33,19 @@ It compares today with that person's usual routine. It also tests whether yester
 
 The project then checks its conclusions on people who were not included during training. This matters because recognizing someone already seen is much easier than working for a genuinely new user.
 
+## Feature engineering and tuning
+
+The original Fitbit files are useful, but they are not ready for prediction on their own. The project first cleans and joins daily activity, sleep, and heart-rate records into one timeline per user. From there, it creates features that are closer to how people actually experience recovery:
+
+- **Personal baselines:** each user's usual sleep, activity, and resting heart rate are estimated from their own past data, so the model compares a person against themselves instead of against a generic average.
+- **Recovery signals:** sleep debt and resting heart-rate deviation are used to capture whether the body looks less recovered than usual.
+- **Activity load:** steps, active minutes, and workout intensity are combined into a simple activity-load score.
+- **Recent history:** the model tests yesterday's values, 3-day, 5-day, and 7-day averages, plus a recency-weighted average, because fatigue and recovery can build up over several days.
+
+For modeling, the project compares Logistic Regression, Random Forest, and XGBoost against simple baselines. Random Forest and XGBoost are also tuned with group-aware cross-validation, meaning the model is tested on users it did not see during training. The tuning focuses on a small set of high-impact choices, such as tree depth, number of trees, learning rate, and regularization, instead of trying every possible setting.
+
+The final model choice is not based only on the highest score. XGBoost performed slightly better in some tests, but the improvement over Random Forest was small and not stable enough across unseen users. Random Forest was selected because it kept nearly the same performance while being easier to explain.
+
 ## What is being predicted
 
 There are two questions:
